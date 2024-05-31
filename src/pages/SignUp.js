@@ -86,7 +86,7 @@ export default function SignUp(){
     const handleSubmit = async (e) => {
         e.preventDefault();
         try{
-            const res = await axios.post('http://localhost:5000/api/auth/signup', {email, password});
+            const res = await axios.post('https://movie-library-server-nine.vercel.app/api/auth/signup', {email, password});
             console.log(res);
             navigate('/')
         }
