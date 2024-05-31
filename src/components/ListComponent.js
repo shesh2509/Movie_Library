@@ -53,7 +53,7 @@ export default function ListComponent({ list, accessToken }) {
     
         try {
           const movieDetailsPromises = list.movies.map(async (movie) => {
-            const res = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`);
+            const res = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${movie.imdbID}`);
             return res.data;
           });
     
