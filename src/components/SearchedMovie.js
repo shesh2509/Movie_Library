@@ -358,7 +358,8 @@ export default function SearchedMovie({movie, accessToken}) {
   setShowPopDetail(true);
   };
 
-  const handleAddToList = () => {
+  const handleAddToList = (e) => {
+    e.stopPropagation()
     setShowPopup(true);
   };
 
