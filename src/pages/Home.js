@@ -131,7 +131,7 @@ export default function Home() {
         }
 
         try {
-            const res = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${search}`);
+            const res = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${search}`);
             console.log(res.data.Search);
             setMovies(res.data.Search || []);
         } catch (err) {
