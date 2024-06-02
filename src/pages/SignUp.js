@@ -91,7 +91,11 @@ export default function SignUp(){
             navigate('/')
         }
         catch(err){
-            console.error(err);
+            if (err.response && err.response.data && err.response.data.error) {
+                alert(err.response.data.error);
+            } else {
+                alert('An error occurred. Please try again.');
+            }
         }
     }
 
